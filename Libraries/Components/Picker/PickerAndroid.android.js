@@ -18,7 +18,7 @@ var ReactPropTypes = require('prop-types');
 var StyleSheet = require('StyleSheet');
 var StyleSheetPropType = require('StyleSheetPropType');
 const ViewPropTypes = require('ViewPropTypes');
-var ViewStylePropTypes = require('ViewStylePropTypes');
+var TextStylePropTypes = require('TextStylePropTypes');
 
 var processColor = require('processColor');
 var requireNativeComponent = require('requireNativeComponent');
@@ -26,10 +26,7 @@ var requireNativeComponent = require('requireNativeComponent');
 var REF_PICKER = 'picker';
 var MODE_DROPDOWN = 'dropdown';
 
-var pickerStyleType = StyleSheetPropType({
-  ...ViewStylePropTypes,
-  color: ColorPropType,
-});
+var pickerStyleType = StyleSheetPropType(TextStylePropTypes);
 
 type Event = Object;
 

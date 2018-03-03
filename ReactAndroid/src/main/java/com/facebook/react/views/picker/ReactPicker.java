@@ -12,6 +12,7 @@ package com.facebook.react.views.picker;
 import javax.annotation.Nullable;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
@@ -148,5 +149,35 @@ public class ReactPicker extends Spinner {
   @VisibleForTesting
   public int getMode() {
     return mMode;
+  }
+
+  private Typeface _typeface = null;
+  private Integer _typefaceStyle = null;
+  private Integer _textSize = null;
+
+  public void setTypeface(Typeface tf) {
+    _typeface = tf;
+    _typefaceStyle = null;
+  }
+
+  public void setTypeface(Typeface tf, Integer style) {
+    _typeface = tf;
+    _typefaceStyle = style;
+  }
+
+  public Typeface getTypeface() {
+    return _typeface;
+  }
+
+  public Integer getTypefaceStyle() {
+    return _typefaceStyle;
+  }
+
+  public void setTextSize(Integer size) {
+    _textSize = size;
+  }
+
+  public Integer getTextSize() {
+    return _textSize;
   }
 }

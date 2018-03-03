@@ -26,10 +26,7 @@ var ViewStylePropTypes = require('ViewStylePropTypes');
 
 var itemStylePropType = StyleSheetPropType(TextStylePropTypes);
 
-var pickerStyleType = StyleSheetPropType({
-  ...ViewStylePropTypes,
-  color: ColorPropType,
-});
+var pickerStyleType = StyleSheetPropType(TextStylePropTypes);
 
 var MODE_DIALOG = 'dialog';
 var MODE_DROPDOWN = 'dropdown';
